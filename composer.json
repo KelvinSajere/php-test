@@ -1,0 +1,10 @@
+{
+    "name": "marrickmedical/php-test",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "app\\": "src/"
+        }
+    }
+}

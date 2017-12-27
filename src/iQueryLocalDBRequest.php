@@ -1,7 +1,6 @@
 <?php
 
-use app\controllers\ConnectorDBIntranet;
-use app\utilities\SqlUtilitiesClass;
+namespace app;
 
 class QueryLocalDBRequest extends ConnectorDBIntranet
 {

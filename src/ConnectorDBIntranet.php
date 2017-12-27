@@ -1,6 +1,6 @@
 <?php
 
-namespace app\controllers;
+namespace app;
 
 register_shutdown_function('app\controllers\ConnectorDBIntranet::cleanUp');
 
