@@ -1,9 +1,6 @@
 <?php
 
 use app\controllers\ConnectorDBIntranet;
-use app\services\Components;
-use app\services\components\Connection;
-use app\services\ComponentLoader;
 use app\utilities\SqlUtilitiesClass;
 
 class QueryLocalDBRequest extends ConnectorDBIntranet
@@ -16,12 +13,7 @@ class QueryLocalDBRequest extends ConnectorDBIntranet
 
     function __construct(array $tables, \mysqli $mysqli = null)
     {
-        if ($mysqli === null) {
-            /** @var Connection $connection */
-            $connection = ComponentLoader::getById(Components::LOCAL_DB_CONNECTION);
-            // Connection is a configured db connection to the database.
-            $mysqli = $connection->getMySqli();
-        }
+        defined('DB_LOCAL_LOGGING') or define('DB_LOCAL_LOGGING', true);
         $this->tables = $tables;
         parent::__construct($mysqli);
     }
