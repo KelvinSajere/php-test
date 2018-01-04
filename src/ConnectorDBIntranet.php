@@ -2,7 +2,7 @@
 
 namespace app;
 
-register_shutdown_function('app\controllers\ConnectorDBIntranet::cleanUp');
+register_shutdown_function('app\ConnectorDBIntranet::cleanUp');
 
 /**
  * Class ConnectorDBIntranet
