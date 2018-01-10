@@ -451,14 +451,8 @@ class QueryLocalDBRequest extends ConnectorDBIntranet
 
     private function logSQLString($sqlQuery)
     {
-        $file = fopen(PATH_ABS_LOGS . 'sqlQueryLog.txt', 'a+');
-        fwrite($file, 'MySQL: ' . date('m-d-Y H:i:s') . ' T- ');
-        if (!$f = fwrite($file, $sqlQuery)) {
-            echo 'Unable to write to file.';
-            exit();
-        }
-        fwrite($file, "\n\n");
-        fclose($file);
+        // write loging if desired
+        echo $sqlQuery;
     }
 
     public function getLastSQLStatement()
