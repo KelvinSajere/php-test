@@ -15,15 +15,15 @@ On
 
 ## Tables Structure:
 ### Patients
-id | name
+patientID | name
 ---|-----
 
 ### Law Firms
-id | name
+lawFirmID | name
 ---|-----
 
 ### Links Patients to Law FIrms
-id | patient_id | law_firm_id
+linkID | patientID | lawFirmID
 ---|-----|----
 
 ## Submit
