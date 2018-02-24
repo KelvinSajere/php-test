@@ -5,5 +5,5 @@ $tables = [];
 $mysqlConnection = null; // todo: create mysqli connection if you want to test
 
 $database = new \app\QueryLocalDBRequest($tables, $mysqlConnection);
-
+a
 // todo: follow instructions in README.md
