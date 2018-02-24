@@ -140,10 +140,11 @@ class SqlUtilitiesClass
         } else {
             $sqlString = 'ORDER BY ';
             foreach ($data as $key => $value) {
+		    //order by value 
                 if ($sqlString == 'ORDER BY ') {
-                    $sqlString .= $key.' '.$value;
+                    $sqlString .= $value;
                 } else {
-                    $sqlString .= ', '.$key.' '.$value;
+                    $sqlString .= ', '.$value;
                 }
             }
             $sqlString .= ' ';
